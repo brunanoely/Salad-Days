@@ -1,0 +1,123 @@
+@import url('../../css/global/global.css');
+
+.container-receitas {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 10px; 
+}
+
+.caixa-receitas {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    border: 1px solid #778899;
+    border-radius: 40px;
+    width: 30%; 
+    height: 550px; 
+    background-color: beige;
+    box-sizing: border-box; 
+}
+
+.caixa-receitas h3 {
+    color: #9ACD32;
+    margin-top: 5px;
+}
+
+.caixa-receitas p {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    margin: 20px;
+    text-align: center;
+}
+
+.bottom {
+    background: linear-gradient(180deg, #9ACD32 50%, #778899 50%);
+    background-size: 100% 200%;
+    display: inline-block;
+    padding: 20px 30px; 
+    color: beige; 
+    border: 1px solid #778899;
+    margin-bottom: 10px;
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 60px; 
+    cursor: pointer;
+    transition: background-position 0.4s ease-in-out, color 0.4s ease;
+    font-family: "Archivo Black", sans-serif;
+}
+
+.bottom:hover {
+    background-position: 0 100%; 
+    color: #fff;
+}
+
+.caixa-receitas img {
+    width: 70%;
+    height: auto;
+    border-radius: 40px;
+    margin-top: 0;
+    min-height: 240px;
+}
+
+header {
+    border: 0px;
+}
+
+.caixa-receitas:hover {
+    transform: scale(1.05); 
+}
+
+.img-receita {
+    width:100%;
+}
+
+.titulo {
+    display: inline-block; /* Mantém os títulos em uma linha */
+    white-space: nowrap; /* Impede a quebra de linha */
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .fraseefeito {
+    margin-top: 40px;
+    display: flex;
+    overflow: hidden;
+    background-color: #778899;
+    width: 100%;
+  }
+  
+  .fraseefeito span {
+    display: inline-block;
+    padding: 10px 0;
+    white-space: nowrap;
+    animation: scroll 40s linear infinite; /* Ajuste a duração como preferir */
+  }
+
+  .bottom:hover {
+	-webkit-animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+	        animation: shadow-pop-br 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+
+ @keyframes shadow-pop-br {
+    0% {
+      -webkit-box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+              box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+      -webkit-transform: translateX(0) translateY(0);
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+      -webkit-box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e;
+              box-shadow: 1px 1px #3e3e3e, 2px 2px #3e3e3e, 3px 3px #3e3e3e, 4px 4px #3e3e3e, 5px 5px #3e3e3e, 6px 6px #3e3e3e, 7px 7px #3e3e3e, 8px 8px #3e3e3e;
+      -webkit-transform: translateX(-8px) translateY(-8px);
+              transform: translateX(-8px) translateY(-8px);
+    }
+  }

@@ -1,0 +1,113 @@
+@import url('../../css/global/global.css');
+
+header {
+    margin-bottom: 60px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 100%; 
+}
+
+.img-apresentacao {
+    width: 90%; 
+}
+
+.texto-apresentacao h2 {
+    display: flex;
+    flex-direction: column;
+    color: #9ACD32;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4em;
+}
+
+.texto-apresentacao {
+    align-items: flex-start; /* Para evitar compressão dos filhos */
+}
+
+.texto-apresentacao {
+    margin: 0px;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    font-style: normal;
+}
+
+.apresentacao-salad {
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    height: 600px; 
+    margin-top: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ingredientes {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #9ACD32;
+    align-content: baseline;
+    height: 600px;
+}
+
+.ingredientes h3 {
+    color: beige;
+    font-size: 2em;
+    font-family: "Oswald", sans-serif;
+    text-align: left;
+}
+
+.titulo-2 h2 {
+    color: beige;
+    margin-top: 120px;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4em; 
+    text-align: left; 
+}
+
+.texto-ing {
+    margin-left: 140px;
+    align-items: center;
+}
+
+.ingredientes ul {
+    color: beige;
+    font-family: "Montserrat", sans-serif;
+    font-size: x-large;
+}
+
+.preparo h2 {
+    margin-top: 30px;
+    color: #9ACD32;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4em; 
+    text-align: right;
+    align-self: flex-start;
+}
+
+.preparo {
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    width: 100%; 
+    height: 600px; 
+    margin-left: 40px;
+}
+
+.preparo ol {    
+    align-self: center;
+    padding: 20px;
+    color: black;
+    font-size: large;
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+}
+
+

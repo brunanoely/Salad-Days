@@ -1,0 +1,64 @@
+@import url('../../css/global/global.css');
+
+main {
+    margin-bottom: 0;
+}
+
+body {
+    background-color: beige;
+    margin: 0;
+    padding-top: 0px;
+}
+
+.caixa-info {
+    display: flex; 
+    position: relative;
+    width: 100%; 
+    overflow: hidden;
+    height: 700px;
+    padding: 10px;
+}
+
+.caixa-texto, .caixa-img {
+    width: 50%;
+}
+
+.caixa-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    padding: 20px;
+}
+
+.caixa-texto h2 {
+    color: #778899;
+    font-size: 3em;
+    font-family: "Oswald", sans-serif;
+    text-align: left;
+}
+
+.caixa-texto p {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    font-style: normal;
+    color:#778899;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.icon-img {
+    background-color: #778899;
+    width: 150px;        /* Defina o tamanho do círculo */
+    height: 150px;       /* Deve ser o mesmo que a largura para ser um círculo */
+    border-radius: 50%;  /* Isso transforma o quadrado em círculo */
+/* Garante que o conteúdo da imagem não ultrapasse os limites do círculo */
+    display: flex;     
+    justify-content: end;  /* Centraliza horizontalmente */
+    align-items: end;      /* Centraliza verticalmente */
+}
+
+.footer p {
+    color: beige;
+}
+
+

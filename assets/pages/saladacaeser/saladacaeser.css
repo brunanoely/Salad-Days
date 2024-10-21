@@ -1,0 +1,103 @@
+@import url('../../css/global/global.css');
+@import url('../../css/global/globalreceitas.css');
+
+header {
+    margin-bottom: 10px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+.img-apresentacao {
+    width: 90%; /* Ajusta o tamanho da imagem para se adaptar ao conteúdo */
+}
+
+.texto-apresentacao h2 {
+    display: flex;
+    flex-direction: column;
+    color: #9ACD32;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4em;
+}
+
+.texto-apresentacao {
+    margin: 0px;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-size: large;
+    font-style: normal;
+}
+
+.apresentacao-salad {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(180deg, beige 60%, #9ACD32 40%);
+    width: 100%; 
+    height: 600px; 
+    box-sizing: border-box;
+    position: relative;
+}
+
+.ingredientes {
+    display: flex;
+    position: relative;
+    flex-direction: column; 
+    background-color: #9ACD32;
+    height: 600px;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.ingredientes h3 {
+    color: beige;
+    font-size: 2em;
+    font-family: "Oswald", sans-serif;
+    text-align: left;
+}
+.texto-ing {
+    margin-left: 140px;
+    align-items: center;
+}
+
+.ingredientes ul {
+    color: beige;
+    font-family: "Montserrat", sans-serif;
+    font-size: x-large;
+    justify-content: space-between;
+}
+
+.titulo-2 h2 {
+    color: beige;
+    margin-top: 120px;
+}
+
+.preparo h2 {
+    color: #9ACD32;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4em; 
+}
+
+.ingredientes h2 {
+    color: beige;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4em; /* Ajuste o tamanho da fonte conforme necessário */
+    text-align: center; /* Centraliza o texto */
+}
+
+.preparo {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    width: 100%; 
+    height: 600px; 
+    justify-content: center;
+    align-items: center;
+
+}
+
