@@ -23,12 +23,15 @@ header {
     font-size: 4em;
 }
 
-.texto-apresentacao {
-    align-items: flex-start; /* Para evitar compressão dos filhos */
+.texto-apresentacao p {
+    width: 80%;
+    font-size: large;
 }
 
 .texto-apresentacao {
-    margin: 0px;
+  
+    margin-left: 30px;
+
 }
 
 p {
@@ -66,7 +69,7 @@ p {
 
 .titulo-2 h2 {
     color: beige;
-    margin-top: 120px;
+    margin-top: 200px;
     font-family: "Archivo Black", sans-serif;
     font-size: 4em; 
     text-align: left; 
@@ -88,8 +91,8 @@ p {
     color: #9ACD32;
     font-family: "Archivo Black", sans-serif;
     font-size: 4em; 
-    text-align: right;
-    align-self: flex-start;
+
+    align-self: center;
 }
 
 .preparo {
@@ -102,10 +105,11 @@ p {
 }
 
 .preparo ol {    
+    width: 80%;
     align-self: center;
     padding: 20px;
     color: black;
-    font-size: large;
+    font-size: x-large;
     font-family: "Montserrat", sans-serif;
     text-align: left;
 }
