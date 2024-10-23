@@ -1,28 +1,49 @@
 @import url('../../css/global/global.css');
-
-.caixa-post {
+.caixa-receitas {
     display: flex;
-    flex-direction: row;
-    height: 400px;
+    height: 600px;
     width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lado-esquerdo {
+    padding: 20px;
+    background-color: beige;
+    display: flex;
+    flex-direction: column; 
+}
+
+.lado-direito {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border: none;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background-color: #D1D4B9; 
-    border-top-left-radius: -50px; 
-    border-top-right-radius: -50px;
+}
+
+.caixa-receitas h3 {
+    color: #778899;
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4em;
+    margin: 0; /* Remove margem para evitar espaçamento extra */
+}
+
+.caixa-receitas p {
+    font-family: Arial, sans-serif;
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #333;
 }
 
 .container1 {
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
+    flex-wrap: wrap;
+    gap: 20px; /* Adiciona espaçamento entre os elementos */
 }
 
-.img-post {  
-    height: 80%;
+.img-post {
+    width: 40%;
+    max-height: 80%; /* Impede que a imagem ultrapasse o limite */
+
 }
 
 .slogan {

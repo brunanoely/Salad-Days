@@ -12,9 +12,13 @@ header {
 }
 
 .img-apresentacao {
-    width: 90%; /* Ajusta o tamanho da imagem para se adaptar ao conteúdo */
+    width: 90%;
 }
 
+.texto-apresentacao p {
+    width: 100% !important;
+    margin-top: 0 !important;
+}
 .texto-apresentacao h2 {
     display: flex;
     flex-direction: column;
