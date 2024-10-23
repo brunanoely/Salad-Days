@@ -4,13 +4,6 @@ header {
     margin-bottom: 60px;
 }
 
-.container2 {
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    width: 100%; 
-}
-
 .img-apresentacao {
     width: 90%; 
 }
@@ -23,15 +16,19 @@ header {
     font-size: 4em;
 }
 
+.texto-apresentacao {
+    text-align: left; 
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    height: 600px; 
+    margin-left: 40px;
+}
+
 .texto-apresentacao p {
     width: 80%;
     font-size: large;
-}
-
-.texto-apresentacao {
-  
-    margin-left: 30px;
-
 }
 
 p {
@@ -43,6 +40,7 @@ p {
 .apresentacao-salad {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%; 
     height: 600px; 
     margin-top: 40px;
@@ -87,11 +85,9 @@ p {
 }
 
 .preparo h2 {
-    margin-top: 30px;
     color: #9ACD32;
     font-family: "Archivo Black", sans-serif;
     font-size: 4em; 
-
     align-self: center;
 }
 
@@ -107,11 +103,32 @@ p {
 .preparo ol {    
     width: 80%;
     align-self: center;
-    padding: 20px;
+    padding: 5px;
     color: black;
     font-size: x-large;
     font-family: "Montserrat", sans-serif;
     text-align: left;
 }
 
+.back-button {
+    position: fixed;
+    top: 120px; /* Distância do topo da página */
+    left: 20px; 
+    background-color: #778899;
+    color: white; 
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px; 
+    text-decoration: none; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
 
