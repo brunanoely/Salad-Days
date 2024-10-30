@@ -5,7 +5,7 @@ header {
 }
 
 .img-apresentacao {
-    width: 90%; 
+    width: 80%; 
 }
 
 .texto-apresentacao h2 {
@@ -27,7 +27,7 @@ header {
 }
 
 .texto-apresentacao p {
-    width: 80%;
+    width: 70%;
     font-size: large;
 }
 

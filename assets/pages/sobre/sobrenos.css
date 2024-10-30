@@ -7,7 +7,7 @@ main {
 body {
     background-color: beige;
     margin: 0;
-    padding-top: 0px;
+    padding-top: 0;
 }
 
 .caixa-info {
@@ -21,6 +21,11 @@ body {
 
 .caixa-texto, .caixa-img {
     width: 50%;
+}
+
+.caixa-img {
+    display: flex; /* Usar flexbox para alinhar o ícone e a imagem */
+    align-items: center;
 }
 
 .caixa-texto {
@@ -41,24 +46,24 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: large;
     font-style: normal;
-    color:#778899;
+    color: black;
     margin: 0;
-    margin-right: 10px;
 }
 
 .icon-img {
+    justify-self: center;
     background-color: #778899;
-    width: 150px;        /* Defina o tamanho do círculo */
-    height: 150px;       /* Deve ser o mesmo que a largura para ser um círculo */
-    border-radius: 50%;  /* Isso transforma o quadrado em círculo */
-/* Garante que o conteúdo da imagem não ultrapasse os limites do círculo */
+    width: 300px;        /* Tamanho do círculo */
+    height: 400px;       /* Deve ser o mesmo que a largura para ser um círculo */
+    border-radius: 20%;  /* Faz o quadrado virar um círculo */
     display: flex;     
-    justify-content: end;  /* Centraliza horizontalmente */
-    align-items: end;      /* Centraliza verticalmente */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;      /* Centraliza verticalmente */
+    margin-right: 20px; /* Espaço entre o ícone e a imagem */
 }
+
+
 
 .footer p {
     color: beige;
 }
-
-

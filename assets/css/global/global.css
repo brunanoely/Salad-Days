@@ -8,6 +8,7 @@ header {
     margin-top: 8px;
     margin-left: 5px;
     margin-right: 5px;
+    width: 100%;
     padding: 0;
 }
 
@@ -81,7 +82,7 @@ body {
     z-index: 1000; 
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
-    width: 100%;
+
 }
 
 .menu a {

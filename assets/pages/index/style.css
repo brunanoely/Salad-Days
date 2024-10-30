@@ -1,22 +1,42 @@
 @import url('../../css/global/global.css');
+
+.linha-com-simbolo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linha {
+    flex: 1;
+    height: 3px;
+    width: 900px;
+    background-color: #778899; /* Cor da linha */
+    margin: 0 10px;
+    border: none; /* Espaço entre a linha e o símbolo */
+}
+
+.simbolo-icon  {
+    width: 40px;
+}
+
 .caixa-receitas {
     display: flex;
     height: 600px;
     width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
 .lado-esquerdo {
     padding: 20px;
     background-color: beige;
     display: flex;
+    width: 50%;
     flex-direction: column; 
 }
 
 .lado-direito {
     display: flex;
     justify-content: center;
+    width: 50%;
     align-items: center;
 }
 
@@ -24,7 +44,6 @@
     color: #778899;
     font-family: "Archivo Black", sans-serif;
     font-size: 4em;
-    margin: 0; /* Remove margem para evitar espaçamento extra */
 }
 
 .caixa-receitas p {
@@ -38,6 +57,19 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px; /* Adiciona espaçamento entre os elementos */
+}
+
+.caixa-dicas {
+    display: flex;
+    flex-wrap: wrap;
+    height: 600px;
+}
+
+.caixa-dicas img {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .img-post {
