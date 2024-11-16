@@ -27,8 +27,12 @@ header {
 }
 
 .texto-apresentacao p {
-    width: 70%;
     font-size: large;
+}
+
+.caixa-p {
+    width: 800px;
+    margin-left: 10px;
 }
 
 p {

@@ -24,8 +24,9 @@ body {
 }
 
 .caixa-img {
-    display: flex; /* Usar flexbox para alinhar o ícone e a imagem */
+    display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .caixa-texto {
@@ -53,13 +54,30 @@ body {
 .icon-img {
     justify-self: center;
     background-color: #778899;
-    width: 300px;        /* Tamanho do círculo */
-    height: 400px;       /* Deve ser o mesmo que a largura para ser um círculo */
-    border-radius: 20%;  /* Faz o quadrado virar um círculo */
+    width: 400px;       
+    height: 400px;      
+    border-radius: 60%;  
     display: flex;     
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;      /* Centraliza verticalmente */
-    margin-right: 20px; /* Espaço entre o ícone e a imagem */
+    justify-content: center;  
+    align-items: center;      
+    margin-right: 20px;
+    margin-left: 40px; 
+    position: relative;
+    z-index: 1;
+}
+
+.bruna  {
+    width: 400px;
+    height: 400px;  
+    display: flex;     
+    justify-content: center;  
+    border-radius: 60%;
+    align-items: center;      
+    margin-right: 40px;
+    margin-left: 140px;
+    position: absolute;
+    z-index: 2;
+ 
 }
 
 
