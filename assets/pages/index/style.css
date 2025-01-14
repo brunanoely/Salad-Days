@@ -1,5 +1,5 @@
 @import url('../../css/global/global.css');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
 .titulo {
     font-size: 4em;
@@ -82,114 +82,141 @@
     padding: 30px 0;
     margin: 20px 0;
     width: 100%;
-}
+} 
 
-.carrossel-items {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-    transition: transform 0.5s ease;
-  }
-  
-  .item {
-    position: relative; /* Necessário para o badge "NEWS" */
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    min-width: 200px; /* Define a largura do card */
-    padding: 10px;
-    overflow: hidden;
-  }
-  
-  .item img {
+.slider{
+    position: relative;
     width: 100%;
-    border-radius: 10px;
-  }
-  
-  .news-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #C7F50B;
-    color: #fff;
-    padding: 5px 10px;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .title {
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
-  }  
-
-.bottom {
-    background: linear-gradient(180deg, #BDE038 50%, #778899 50%);
-    background-size: 100% 200%;
-    align-self: center;
-    width: 150px;
-    padding: 20px 30px; 
-    color: beige; 
-    border: 1px solid #778899;
-    margin-bottom: 10px;
-    text-decoration: none; 
-    font-weight: bold; 
-    border-radius: 60px; 
-    cursor: pointer;
-    transition: background-position 0.4s ease-in-out, color 0.4s ease;
-    font-family: "Archivo Black", sans-serif;
+    height:100vh;
+    background-image: linear-gradient(to right, beige, beige);
+    overflow: hidden;
 }
 
-.bottom:hover {
-    background-position: 0 100%; 
-    color: #fff;
-}
-
-.caixa-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    height: auto;
-    width: 100%;
-    margin: 10px;
-  }
-
-  .card {
-    padding: 15px;
-    border: 1px solid #778899;
-    text-align: center;
+.slider::before{
+    position:absolute;
+    width: 50%;
+    height: 100vh;
+    content:'';
+    top: 0;
+    left: 0;
     background-color: beige;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    min-width: 400px; 
-    min-height: 300px;
+}
 
-  }
+.title{
+    font-family:Arial, Helvetica, sans-serif;
+    position:absolute;
+    top:10%;
+    right:60%;
+    text-align: right;
+    color: #0D0E12;
+    font-size: 150px;
+    width: 40%;
+    line-height: .9em;
+    text-shadow: 3px 5px 0 #2B2F3A;
+    transform: rotate(-5deg);
+}
 
-  .caixa-txt {
-    width: 90%;
+.content {
+    color: #fff;
+    position:absolute;
+    top:10%;
+    left:60%;
+    text-align: justify;
+    width: 350px;
+}
 
-  }
+.content h2 {
+    color:#DBF227;
+    font-family:"Archivo", sans-serif;;
+    font-size: xxx-large
+}
 
-  .texto {
-    font-family: Arial, sans-serif;
-    font-size: 1.2em;
-    margin-top: 10px;
-    color: black;
-  }
+.content button{
+    margin-top: 30px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: #9ACD32;
+    color:#fff;
+    border: none;
+    float: right;
+}
 
-  .card h3 {
-    margin-bottom: 10px;
-    color:#9ACD32;
-  }
+.content .item{
+    display: none;
+}
 
-  .card p {
-    font-family: Arial, sans-serif;
-    font-size: 1.2em;
+.content .item.active{
+    display: block;
+}
+
+@keyframes showContent{
+    from{
+        opacity:0;
+        transform: translateY(100px);
+    }to{
+        opacity:1;
+        transform: translateY(0);
+    } 
+}
+
+.content .item.item.active h2{
+    opacity: 0;
+    animation: showContent .5s ease-in-out 1 forwards;
+}
+
+.content .item.item.active .des{
+    opacity: 0;
+    animation: showContent .5s .3s ease-in-out 1 forwards;
+}
+
+.content .item.item.active button {
+    opacity: 0;
+    animation: showContent .5s .6s ease-in-out 1 forwards;
+}
+
+.images {
+    position: absolute;
+    top:190%;
+    left:50%;
+    --rotate: 0deg;
+    transform: translate(-50%, -50%) rotate(var(--rotate));
+    width:1300px;
+    height:1300px;
+    border-radius: 50%;
+    transition: transform 0.5s ease-in-out;
+    outline: 3px dashed #fff;
+    outline-offset: -100px;
+}
+
+.images .item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    color: black;
-  }
+    rotate: calc(60deg * var(--i));
+}
+
+.images .item img{
+    height: 420px;
+}
+
+#prev, #next{
+    position:absolute;
+    border:none;
+    top:170%;
+    left: 250px;
+    font-size: 100px;
+    font-family: cursive;
+    background-color: transparent;
+    color: #fff;
+    font-weight: bold;
+}
+
+#next{
+    left:unset;
+    right:250px;
+}
+
+#prev:hover, #next:hover{
+    opacity: 1;
+}

@@ -1,25 +1,37 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const carrossel = document.querySelector('.carrossel-items');
-  const btnNext = document.querySelector('.next');
-  const btnPrev = document.querySelector('.prev');
+let prev = document.getElementById('prev');
+let next = document.getElementById('next');
+let image = document.querySelector('.images');
+let items = document.querySelectorAll('.images .item');
+let contents = document.querySelectorAll('.content .item');
 
-  let offset = 0;
-  const itemWidth = 220; // Largura do item + gap
-  const totalItems = carrossel.children.length; // Total de itens
-  const visibleItems = 3; // Quantidade de itens visíveis ao mesmo tempo
+let rotate = 0;
+let active = 0;
+let countItem = items.length;
+let rotateAdd = 360 / countItem;
 
-  btnNext.addEventListener('click', () => {
-    const maxOffset = -(itemWidth * (totalItems - visibleItems));
-    if (offset > maxOffset) {
-      offset -= itemWidth;
-      carrossel.style.transform = `translateX(${offset}px)`;
+function show() {
+  image.style.setProperty('--rotate', rotate + 'deg');
+  contents.forEach((content, key) => {
+    if (key == active){
+      content.classList.add('active');
+    }else{
+      content.classList.remove('active');
     }
-  });
+  })
+}
 
-  btnPrev.addEventListener('click', () => {
-    if (offset < 0) {
-      offset += itemWidth;
-      carrossel.style.transform = `translateX(${offset}px)`;
-    }
-  });
-});
+function nextSlider(){
+  active = active + 1 > countItem - 1 ? 0 : active + 1;
+  rotate = rotate + rotateAdd;
+  show();
+}
+next.onclick = nextSlider;
+
+function prevSlider(){
+  active = active - 1 < 0 ? countItem - 1 : active -1;
+  rotate = rotate - rotateAdd;
+  show();
+}
+prev.onClick = prevSlider;
+//auto play in nextSlider
+const autoNext = setInterval(nextSlider, 5000); //3s
