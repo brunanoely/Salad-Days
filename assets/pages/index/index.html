@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--referencias --> 
+    // TODO : tirar as referencias nao usadas
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="../../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="../index/style.css">
@@ -17,7 +18,6 @@
     <title>SALAD DAYS</title>
 </head>
 <body>
-    <!-- Cabeçalho -->
     <header>
         <nav class="caixa-menu-principal">
             <div class="titulo-e-imagem">
@@ -30,8 +30,6 @@
             </ul>
         </nav>
     </header>
-    
-    <!-- Conteúdo do site -->
 
      <section class="slogan">
             <div class="imagem-slogan">
@@ -41,17 +39,49 @@
             </div>
             <img class="img-slogan" src="../../images/slogan3.png" alt="imagem slogan">
      </section>
-    <main>
+
+<main>
+
+    <div class="bar"></div>
     <section id="receitas">
         <h2>RECEITAS</h2>
-         <p>AS RECEITAS MAIS RECENTES ADICIONADAS</p>
-        <div class="carousel">
-              <button class="prev">◀</button>
-              <div class="carousel-items">
-                <!-- Os itens serão inseridos dinamicamente aqui -->
+        <p>AS RECEITAS MAIS RECENTES ADICIONADAS</p>
+        <div class="carrossel">
+            <button class="btn prev">◀</button>
+            <div class="carrossel-items">
+              <div class="item">
+                <span class="news-badge">NEWS</span>
+                <img src="https://via.placeholder.com/150" alt="Salada Caesar">
+                <p>SALADA CAESAR</p>
               </div>
-              <button class="next">▶</button>
-        </div>
+              <div class="item">
+                <span class="news-badge">NEWS</span>
+                <img src="https://via.placeholder.com/150" alt="Salada Tropical">
+                <p>SALADA CAPRESE</p>
+              </div>
+              <div class="item">
+                <span class="news-badge">NEWS</span>
+                <img src="https://via.placeholder.com/150" alt="Salada Verde">
+                <p>SALADA BIG MAC</p>
+              </div>
+              <div class="item">
+                <span class="news-badge">NEWS</span>
+                <img src="https://via.placeholder.com/150" alt="Salada de Frutas">
+                <p>SALADA CLÁSSICA</p>
+              </div>
+              <div class="item">
+                <span class="news-badge">NEWS</span>
+                <img src="https://via.placeholder.com/150" alt="Salada de Grão-de-Bico">
+                <p>SALADA MEDITERRÂNEA</p>
+              </div>
+              <div class="item">
+                <span class="news-badge">NEWS</span>
+                <img src="https://via.placeholder.com/150" alt="Salada Caprese">
+                <p>SALADA ORIENTAL</p>
+              </div>
+            </div>
+            <button class="btn next">▶</button>
+          </div>          
         <div class="text-button">
             <p>Nada melhor do que unir sabor, frescor e saúde em um único prato. As saladas são uma explosão de cores e texturas que transformam qualquer refeição em uma experiência especial. Seja você um amante da culinária saudável ou alguém em busca de praticidade, aqui você encontrará receitas que atendem a todos os gostos.</p>
             <button class="view-recipes"></button>
@@ -59,11 +89,13 @@
     </section>
 
     <section id="about">
-        <div class="text-history">
+        <div class="title-history">
             <h2>NOSSA HISTÓRIA</h2>
-            <p>Olá, eu sou a Bruna, estudante de ciência da computação na PUC Minas e desenvolvedora do Salad Days, e quero compartilhar com vocês a jornada que me levou a criar esse site de receitas de saladas.
-            Confesso que a proposta inicial ao desenvolver essa aplicação web era fazer um blog, entretanto, acredito que a melhor maneira de conhecer alguém é conhecendo mais sobre seus gostos, por isso o Salad Days, criado por alguém que ama saladas e queria compartilhar.
-            Nosso objetivo não é só compartilhar receitas, mas também incentivar um estilo de vida saudável de forma prática.</p>
+            <div class="text-apresentation">
+                <p>Olá, eu sou a Bruna, estudante de ciência da computação na PUC Minas e desenvolvedora do Salad Days, e quero compartilhar com vocês a jornada que me levou a criar esse site de receitas de saladas.
+                Confesso que a proposta inicial ao desenvolver essa aplicação web era fazer um blog, entretanto, acredito que a melhor maneira de conhecer alguém é conhecendo mais sobre seus gostos, por isso o Salad Days, criado por alguém que ama saladas e queria compartilhar.
+                Nosso objetivo não é só compartilhar receitas, mas também incentivar um estilo de vida saudável de forma prática.</p>
+            </div>
         </div>
             <img src="img-about" alt="">
     </section>

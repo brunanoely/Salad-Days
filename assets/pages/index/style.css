@@ -1,75 +1,6 @@
 @import url('../../css/global/global.css');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lilita+One&display=swap');
 
-.linha-com-simbolo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.linha {
-    flex: 1;
-    height: 3px;
-    width: 900px;
-    background-color: #778899; 
-    margin: 0 10px;
-    border: none; 
-}
-
-.simbolo-icon  {
-    width: 40px;
-}
-
-.caixa-receitas {
-    display: flex;
-    height: auto;
-    width: 100%;
-}
-
-.lado-esquerdo {
-    padding: 20px;
-    background-color: beige;
-    display: flex;
-    width: 50%;
-    flex-direction: column; 
-}
-
-.lado-direito {
-    display: flex;
-    justify-content: center;
-    width: 50%;
-    align-items: center;
-}
-
-.caixa-receitas h3 {
-    color: #778899;
-    font-family: "Archivo Black", sans-serif;
-    font-size: 4em;
-    margin-bottom: 0px;
-}
-
-.caixa-receitas h4 {
-    color: #6a6491;
-    font-family: Arial, sans-serif;
-    font-size: 1.2em;
-}
-
-.caixa-receitas p {
-    font-family: Arial, sans-serif;
-    font-size: 1.2em;
-    margin-top: 10px;
-    width: 80%;
-    align-self: center;
-    color: black;
-}
-
-.caixa-dicas {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0px;
-}
-
 .titulo {
     font-size: 4em;
     font-family: "Archivo Black", sans-serif;
@@ -101,7 +32,7 @@
     width: 1700px;
     padding: 50px;
     align-items: center;
-    background-color: #9ACD32;
+    background-color: #BDE038;
     margin: 30px  auto;
     margin-bottom: 40px;
     margin-top: 80px;
@@ -146,8 +77,58 @@
     text-align: center;
 }
 
+.bar {
+    background-color: #DBF227;
+    padding: 30px 0;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.carrossel-items {
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+  }
+  
+  .item {
+    position: relative; /* Necessário para o badge "NEWS" */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 200px; /* Define a largura do card */
+    padding: 10px;
+    overflow: hidden;
+  }
+  
+  .item img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .news-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #C7F50B;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+  }  
+
 .bottom {
-    background: linear-gradient(180deg, #9ACD32 50%, #778899 50%);
+    background: linear-gradient(180deg, #BDE038 50%, #778899 50%);
     background-size: 100% 200%;
     align-self: center;
     width: 150px;
