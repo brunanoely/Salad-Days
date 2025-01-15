@@ -3,32 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/css/global/login.css">
-    <title>Fazer Login: Salad Days</title>
+    <title>Login: Salad Days</title>
 </head>
 
 <body>
-    <section>
-    <div class="login-box">
-        <form action="">
-            <h2>Fazer Login</h2>
-            <div class="input-box">
-                <input type="email" required>
-                <label>Email</label>
-            </div>
-            <div class="input-box">
-                <input type="Senha" required>
-                <label>Senha</label>
-            </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox">Lembrar senha</label>
-                <a href="#">Esqueceu a Senha?</a>
-            </div>
-            <button type="submmit">Login</button>
-            <div class="register-link">
-                <p>Ainda não tem uma conta? <a href="#">Cadastrar</a></p>
-            </div>
-        </form>
+    <div class="wrapper">
+        <div class="form-box login active" id="login-box">
+            <form action="#">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Lembrar senha</label>
+                    <a href="#">Esqueceu a Senha?</a>
+                </div>
+                <button type="submit">Login</button>
+                <div class="register-link">
+                    <p>Ainda não tem uma conta? <a href="#" id="show-register">Cadastrar</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-box register" id="register-box">
+            <form action="#">
+                <h2>Cadastro</h2>
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>Usuário</label>
+                </div>
+                <div class="input-box">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label>Senha</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Aceito os termos e condições de uso.</label>
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+                <div class="login-register">
+                    <p>Já tem uma conta? <a href="#" id="show-login">Login</a></p>
+                </div>
+            </form>
+        </div>
     </div>
-</section>
+
+    <script src="./assets/js/login.js"></script>
 </body>
+</html>
