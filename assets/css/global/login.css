@@ -19,11 +19,13 @@ body {
     height: 550px;
     overflow: hidden; 
     background-color: beige;
-    border-radius: 15px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid #BDE038;
+    text-align: center;
 }
 
 .login-box {
@@ -87,7 +89,7 @@ h2 {
 .input-box {
     position: relative;
     width: 300px;
-    margin: 25px 0;
+    margin: 35px 0;
     border-radius: 30px;
 }
 
@@ -99,16 +101,17 @@ h2 {
     pointer-events: none; 
     font-family: "Archivo", serif;
     font-weight: 400;
+    color: #333;
     transition: 0.5s;
 }
 
-.input-box input:focus~label, 
-.input-box input:valid~label {
-    top: -15px;
+.input-box label.float {
+    top: -15px; 
+    color: black;/
 }
 
 .input-box input {
-    width: 100%;
+    width: 380px;
     height: 40px;
     border-radius: 30px;
     border: 1px solid #BDE038;
@@ -173,4 +176,17 @@ button:hover {
 
 .register-link p a:hover, .login-register p a:hover {
     text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    display: none; /* Oculta a mensagem por padrão */
+}
+
+/* Realce de campo com erro */
+.input-box input.error {
+    border-color: red;
 }

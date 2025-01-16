@@ -35,3 +35,65 @@ function prevSlider(){
 prev.onClick = prevSlider;
 //auto play in nextSlider
 const autoNext = setInterval(nextSlider, 5000); //3s
+
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('header'); // Seleciona o elemento <header>
+  let lastScrollPosition = 0; // Última posição do scroll
+  let isMouseMoving = false; // Flag para rastrear movimento do mouse
+
+  // Função para ocultar ou mostrar o cabeçalho ao rolar a página
+  window.addEventListener('scroll', () => {
+      const currentScrollPosition = window.scrollY; // Obtém a posição atual do scroll
+      if (currentScrollPosition > lastScrollPosition) {
+          // Se rolando para baixo, oculta o cabeçalho
+          header.classList.add('hidden');
+      } else {
+          // Se rolando para cima, mostra o cabeçalho
+          header.classList.remove('hidden');
+      }
+      lastScrollPosition = currentScrollPosition;
+  });
+
+  // Função para mostrar o cabeçalho ao mover o mouse
+  document.addEventListener('mousemove', () => {
+      if (!isMouseMoving) {
+          header.classList.remove('hidden'); // Mostra o cabeçalho
+          isMouseMoving = true;
+
+          // Após 2 segundos sem movimento do mouse, oculta o cabeçalho novamente
+          setTimeout(() => {
+              isMouseMoving = false;
+              if (window.scrollY > 0) {
+                  header.classList.add('hidden');
+              }
+          }, 2000);
+      }
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const menu = document.querySelector('.caixa-menu-principal'); // Seleciona o menu principal
+  let lastScrollPosition = 0; // Armazena a última posição do scroll
+  let hasScrolledDown = false; // Flag para verificar se o usuário rolou a página
+
+  // Detecta o scroll
+  window.addEventListener('scroll', () => {
+      const currentScrollPosition = window.scrollY;
+
+      // Verifica se o usuário rolou para baixo
+      if (currentScrollPosition > 0) {
+          hasScrolledDown = true;
+      } else {
+          hasScrolledDown = false;
+          menu.classList.remove('transparent'); // Remove a transparência ao voltar ao topo
+      }
+
+      lastScrollPosition = currentScrollPosition;
+  });
+
+  document.addEventListener('mousemove', () => {
+      if (hasScrolledDown) {
+          menu.classList.add('transparent');
+      }
+  });
+});
