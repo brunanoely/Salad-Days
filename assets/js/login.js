@@ -35,36 +35,34 @@ fetch('../../db/receitas.json')
     });
 
 function configurarLogin() {
-    const loginForm = document.querySelector('#login-box form');
+        const loginForm = document.querySelector('#login-box form');
+    
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+    
+            const loginInput = loginForm.querySelector('#login-input').value; 
+            const senhaInput = loginForm.querySelector('input[type="password"]').value;
+    
+            console.log('Login digitado:', loginInput);
+            console.log('Senha digitada:', senhaInput);
+    
+            if (usuarios.length === 0) {
+                alert('Os dados ainda não foram carregados. Tente novamente.');
+                return;
+            }
+    
+            const user = usuarios.find(user =>
+            (user.login === loginInput || user.email === loginInput) &&
+            user.senha === senhaInput);
 
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-
-        const loginInput = loginForm.querySelector('input[type="email"]').value;
-        const senhaInput = loginForm.querySelector('input[type="password"]').value;
-
-        console.log('Login digitado:', loginInput);
-        console.log('Senha digitada:', senhaInput);
-
-        if (usuarios.length === 0) {
-            alert('Os dados ainda não foram carregados. Tente novamente.');
-            return;
-        }
-
-        const user = usuarios.find(user => 
-            (user.login.toLowerCase() === loginInput.trim().toLowerCase() || 
-             user.email.toLowerCase() === loginInput.trim().toLowerCase()) && 
-            user.senha === senhaInput.trim() 
-        );
-
-        if (user) {
-            alert(`Bem-vindo, ${user.nome}!`);
-            window.location.href = '/assets/pages/index/index.html';
-        } else {
-            alert('Login ou senha inválidos!');
-        }
-    });
-}
+            if (user) {
+                window.location.href = '/assets/pages/index/index.html';
+                alert(`Bem-vindo, ${user.nome}!`);  
+            } else {
+                alert('Login ou senha inválidos!');
+            }
+        });
+    }    
 
 const registerForm = document.querySelector('#register-box form');
 
